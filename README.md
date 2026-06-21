@@ -1,47 +1,75 @@
-<!--
-  - SPDX-FileCopyrightText: 2017 Nextcloud GmbH and Nextcloud contributors
-  - SPDX-License-Identifier: AGPL-3.0-or-later
--->
-# User usage report
+[update-readmes]   Mode: rewrite — migrating to template structure...
+# user_usage_report
 
-[![REUSE status](https://api.reuse.software/badge/github.com/nextcloud/user_usage_report)](https://api.reuse.software/info/github.com/nextcloud/user_usage_report)
+[![Built with Ona](https://ona.com/build-with-ona.svg)](https://app.ona.com/#https://github.com/Interested-Deving-1896/user_usage_report)
 
-To generate the report for a user, run the following command:
+<!-- AI:start:what-it-does -->
+_Description pending._
+<!-- AI:end:what-it-does -->
 
-```sh
-$ sudo -u www-data ./occ usage-report:generate admin
-"admin","2017-09-18T09:00:01+00:00",5368709120,786432000,12,1,1,2
+## Architecture
+
+<!-- AI:start:architecture -->
+_Architecture documentation pending._
+<!-- AI:end:architecture -->
+
+## Install
+
+<!-- Add installation instructions here. This section is yours — the AI will not modify it. -->
+
+```bash
+git clone https://github.com/Interested-Deving-1896/user_usage_report.git
+cd user_usage_report
 ```
 
-Leaving out the user argument will generate a report for all users on the system:
+## Usage
 
-```sh
-$ sudo -u www-data ./occ usage-report:generate --display-name
-"admin","Nextcloud Admin","2017-09-18T09:00:01+00:00",5368709120,786432000,12,1,1,2
-"test1","Test User 1","2017-09-18T09:00:01+00:00",-2,954368,6,0,2,10
-"test2","Second Test user","2017-09-18T09:00:01+00:00",-2,164,4,0,0,0
-"test3","Test User Three","2017-09-18T09:00:01+00:00",-2,164,4,0,0,0
-"test5","Fifth Tester","2017-09-18T09:00:01+00:00",-2,164,4,0,0,0
+<!-- Add usage examples here. This section is yours — the AI will not modify it. -->
+
+## Configuration
+
+<!-- Document configuration options here. This section is yours — the AI will not modify it. -->
+
+## CI
+
+<!-- AI:start:ci -->
+_CI documentation pending._
+<!-- AI:end:ci -->
+
+## Mirror chain
+
+<!-- AI:start:mirror-chain -->
+This repo is maintained in [`Interested-Deving-1896/user_usage_report`](https://github.com/Interested-Deving-1896/user_usage_report) and mirrored through:
+
+```
+Interested-Deving-1896/user_usage_report  ──►  OpenOS-Project-OSP/user_usage_report  ──►  OpenOS-Project-Ecosystem-OOC/user_usage_report
 ```
 
-The CSV data is the following:
+Changes flow downstream automatically via the hourly mirror chain in
+[`fork-sync-all`](https://github.com/Interested-Deving-1896/fork-sync-all).
+Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-Deving-1896`.
+<!-- AI:end:mirror-chain -->
 
-* User identifier
-* User display name (when `--display-name` is given)
-* Current date and time (default in ISO 8601 format, but any format can be specified)
-* Last login date and time (default in ISO 8601 format, but any format can be specified)  (when `--last-login` is given)
-* Assigned home storage size in bytes (`-3` is unlimited, `-2` is unknown/not set)
-* Disk space consumed by home storage in bytes (`-2` is unknown)
-* Number of files in home storage
-* Number of shares created
-* Number of files created (new files only)
-* Number of files read (download/view)
+## Contributors
 
-To include the header of the fields in the CSV use the `--verbose` option:
+<!-- AI:start:contributors -->
+_Contributors pending._
+<!-- AI:end:contributors -->
 
-```sh
-$ sudo -u www-data ./occ usage-report:generate --verbose admin
-"user-id","date as 'c'","assigned quota (5 GB)","used quota (500 MB)",number of files,number of shares,number of uploads,number of downloads
-"admin","2017-09-18T09:00:01+00:00",5368709120,786432000,12,1,1,2
-```
+## Origins
 
+<!-- AI:start:origins -->
+_Original project — no upstream fork._
+<!-- AI:end:origins -->
+
+## Resources
+
+<!-- AI:start:resources -->
+_No additional resource files found._
+<!-- AI:end:resources -->
+
+## License
+
+<!-- AI:start:license -->
+[AGPL-3.0](https://github.com/Interested-Deving-1896/user_usage_report/blob/master/COPYING) © 2026 [Interested-Deving-1896](https://github.com/Interested-Deving-1896)
+<!-- AI:end:license -->
